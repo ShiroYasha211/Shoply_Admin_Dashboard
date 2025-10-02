@@ -139,21 +139,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 🆘 Support
 
-If you encounter any issues or have questions:
-
-1. Check the [Issues](https://github.com/yourusername/shoply-admin-dashboard/issues) page
-2. Create a new issue with detailed description
-3. Contact the maintainers
-
-## 🙏 Acknowledgments
-
-- Flutter team for the amazing framework
-- Supabase for the powerful backend solution
-- GetX community for state management
-- All contributors and supporters
-
----
-
-**Built with ❤️ using Flutter & Supabase**
