@@ -125,8 +125,7 @@ lib/
 
 <img width="1920" height="865" alt="Screenshot 2025-10-02 212500" src="https://github.com/user-attachments/assets/63548ed8-c499-430b-b029-2e5775e22101" />
 
-- Analytics Char![Uploading Screenshot 2025-10-02 212500.png…]()
-ts
+- Analytics Char
 
 ## 🤝 Contributing
 
