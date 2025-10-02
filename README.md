@@ -127,6 +127,10 @@ lib/
 
 - Analytics Char
 
+<img width="1920" height="869" alt="Screenshot 2025-10-02 205737" src="https://github.com/user-attachments/assets/a6b57f56-3f64-496c-a9bb-88f0a5675d47" />
+
+- Order Details
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
