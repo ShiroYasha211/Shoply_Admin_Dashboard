@@ -1,179 +1,235 @@
-# Shoply Admin Dashboard
+# Shoply Admin Dashboard 🛍️
 
-لوحة تحكم إدارية متطورة لإدارة متجر Shoply الإلكتروني، مطورة بـ Flutter Web ومتصلة بقاعدة بيانات Supabase.
+A modern, responsive e-commerce admin dashboard built with Flutter Web and connected to Supabase backend. This dashboard provides comprehensive management tools for products, users, orders, and analytics.
 
-## الميزات الرئيسية
+![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
 
-### 🔐 نظام المصادقة
-- تسجيل دخول آمن للمدراء فقط
-- التحقق من صلاحيات المستخدم
-- حماية جميع الصفحات بـ Middleware
+## 🌟 Features
 
-### 📊 لوحة التحكم الرئيسية
-- إحصائيات شاملة (عدد المستخدمين، المنتجات، الطلبات)
-- مبيعات اليوم والإجمالية
-- الطلبات الأخيرة والمستخدمين الجدد
-- رسوم بيانية تفاعلية
+### 🔐 Authentication
+- **Secure Admin Login**: Role-based authentication system
+- **Session Management**: Persistent login sessions
+- **Admin-only Access**: Protected routes with middleware
 
-### 👥 إدارة المستخدمين
-- عرض قائمة جميع المستخدمين
-- البحث والتصفية حسب الدور
-- تحديث أدوار المستخدمين
-- حذف المستخدمين
+### 📊 Dashboard Overview
+- **Real-time Analytics**: Key metrics and statistics
+- **Sales Performance**: Revenue tracking and charts
+- **Quick Actions**: Fast access to common tasks
 
-### 🛍️ إدارة المنتجات
-- عرض جميع المنتجات مع الفئات
-- إضافة وتعديل وحذف المنتجات
-- تتبع المخزون
-- البحث في المنتجات
+### 👥 User Management
+- **User Directory**: Complete user profiles and information
+- **Registration Tracking**: Monitor new user registrations
+- **User Analytics**: Activity and engagement metrics
 
-### 📦 إدارة الطلبات
-- عرض جميع الطلبات مع التفاصيل
-- تحديث حالة الطلبات
-- إحصائيات الطلبات حسب الحالة
-- تتبع المبيعات
+### 🛍️ Product Management
+- **Product Catalog**: Full product CRUD operations
+- **Inventory Tracking**: Stock levels and management
+- **Category Organization**: Product categorization system
+- **Search & Filter**: Advanced product search capabilities
 
-### 🎨 التصميم
-- واجهة عربية بثيم أخضر هادئ
-- تصميم متجاوب لجميع الشاشات
-- مكونات UI حديثة ومتسقة
+### 📦 Order Management
+- **Order Processing**: Complete order lifecycle management
+- **Status Tracking**: Real-time order status updates
+- **Customer Communications**: Order notifications and updates
 
-## متطلبات التشغيل
+### 📈 Analytics & Reports
+- **Sales Analytics**: Comprehensive sales reporting
+- **Performance Metrics**: Business intelligence dashboards
+- **Data Visualization**: Interactive charts and graphs
 
-### 1. Flutter SDK
-```bash
-flutter --version
-# يجب أن يكون Flutter 3.10.0 أو أحدث
-```
+## 🚀 Demo
 
-### 2. تفعيل Flutter Web
-```bash
-flutter config --enable-web
-```
+### Live Demo Access
+**Admin Credentials:**
+- **Email:** `mohammed211@gmail.com`
+- **Password:** `123456`
 
-## التثبيت والتشغيل
+> **Note:** These are demo credentials for testing purposes only.
 
-### 1. تحميل المكتبات
-```bash
-flutter pub get
-```
+## 🛠️ Technology Stack
 
-### 2. تشغيل المشروع
-```bash
-flutter run -d chrome
-```
+- **Frontend Framework:** Flutter Web
+- **State Management:** GetX
+- **Backend:** Supabase (PostgreSQL)
+- **Authentication:** Supabase Auth
+- **Charts:** FL Chart
+- **UI Components:** Custom responsive widgets
+- **Architecture:** Clean Architecture with MVC pattern
 
-أو لتشغيل بمنفذ محدد:
-```bash
-flutter run -d web-server --web-port 8080
-```
+## 📱 Responsive Design
 
-## إعدادات قاعدة البيانات
+The dashboard is fully responsive and works seamlessly across:
+- 🖥️ Desktop (1200px+)
+- 💻 Laptop (768px - 1199px)
+- 📱 Tablet (576px - 767px)
+- 📱 Mobile (< 576px)
 
-تم ربط المشروع بقاعدة بيانات Supabase مع الإعدادات التالية:
-- **URL**: `https://tiqawwnnxysywclxjbhv.supabase.co`
-- **Anon Key**: المفتاح محفوظ في الملف المناسب
-
-### جداول قاعدة البيانات
-- `profiles` - بيانات المستخدمين
-- `products` - المنتجات  
-- `categories` - الفئات الرئيسية
-- `subcategories` - الفئات الفرعية
-- `orders` - الطلبات
-- `order_items` - عناصر الطلبات
-- `reviews` - التقييمات
-- `notifications` - الإشعارات
-
-## طريقة الاستخدام
-
-### 1. تسجيل الدخول
-- افتح المشروع في المتصفح
-- استخدم بريد إلكتروني وكلمة مرور لحساب مدير
-- يجب أن يكون المستخدم من نوع `admin` في قاعدة البيانات
-
-### 2. التنقل
-- استخدم القائمة الجانبية للتنقل بين الأقسام
-- اضغط على أيقونة القائمة لطي/توسيع الشريط الجانبي
-- استخدم أيقونة الملف الشخصي لتسجيل الخروج
-
-### 3. إدارة البيانات
-- جميع العمليات متصلة بقاعدة البيانات الحقيقية
-- التحديثات تظهر مباشرة
-- رسائل تأكيد للعمليات المهمة
-
-## هيكل المشروع
+## 🏗️ Project Structure
 
 ```
 lib/
 ├── app/
-│   ├── controllers/          # كنترولرز عامة
+│   ├── controllers/           # Global controllers
 │   │   └── auth_controller.dart
-│   ├── core/                 # الملفات الأساسية
-│   │   ├── constants/        # الثوابت
-│   │   ├── middleware/       # حماية المسارات
-│   │   └── services/         # خدمات الاتصال
+│   ├── core/
+│   │   ├── constants/         # App constants
+│   │   ├── middleware/        # Route middleware
+│   │   ├── services/          # Core services
+│   │   └── values/           # Theme and styling
 │   ├── data/
-│   │   ├── models/           # نماذج البيانات
-│   │   └── services/         # خدمات قاعدة البيانات
-│   ├── modules/              # صفحات التطبيق
-│   │   ├── login/
-│   │   ├── dashboard/
-│   │   ├── users/
-│   │   ├── products/
-│   │   ├── orders/
-│   │   └── ...
-│   ├── routes/               # المسارات
-│   ├── themes/               # الثيمات والألوان
-│   └── widgets/              # المكونات المشتركة
-└── main.dart                 # نقطة البداية
+│   │   ├── models/           # Data models
+│   │   └── services/         # Data services
+│   ├── modules/              # Feature modules
+│   │   ├── dashboard/        # Dashboard module
+│   │   ├── products/         # Products module
+│   │   ├── users/           # Users module
+│   │   ├── orders/          # Orders module
+│   │   └── login/           # Authentication module
+│   ├── routes/              # App routing
+│   └── widgets/             # Shared widgets
+└── main.dart               # App entry point
 ```
 
-## تطوير ميزات جديدة
+## 🚀 Getting Started
 
-### إضافة صفحة جديدة
-1. أنشئ مجلد جديد في `modules/`
-2. أضف ملفات `controller.dart`, `view.dart`, `binding.dart`
-3. سجل المسار في `app_pages.dart`
-4. أضف العنصر في الشريط الجانبي
+### Prerequisites
 
-### إضافة خدمة جديدة
-1. أنشئ ملف في `data/services/`
-2. استخدم `SupabaseService.client` للاتصال
-3. أضف error handling مناسب
+- Flutter SDK (^3.0.0)
+- Dart SDK (^3.0.0)
+- Web browser (Chrome recommended)
+- Supabase account
 
-## استكشاف الأخطاء
+### Installation
 
-### مشاكل شائعة
-1. **خطأ Supabase**: تأكد من صحة الـ URL والمفتاح
-2. **مشاكل Cors**: استخدم `flutter run -d chrome --web-browser-flag "--disable-web-security"`
-3. **خطأ في البناء**: شغل `flutter clean && flutter pub get`
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/shoply-admin-dashboard.git
+cd shoply-admin-dashboard
+```
 
-### سجلات الأخطاء
-تظهر الأخطاء في:
-- كونسول المتصفح (F12)
-- terminal Flutter
-- Supabase Dashboard
+2. **Install dependencies**
+```bash
+flutter pub get
+```
 
-## الأمان
+3. **Configure Supabase**
+   
+   Update the Supabase configuration in `lib/app/core/constants/supabase_constants.dart`:
+```dart
+class SupabaseConstants {
+  static const String supabaseUrl = 'YOUR_SUPABASE_URL';
+  static const String supabaseAnonKey = 'YOUR_SUPABASE_ANON_KEY';
+}
+```
 
-- جميع المسارات محمية بـ AuthMiddleware
-- التحقق من دور المستخدم في كل طلب
-- عدم تخزين بيانات حساسة في Local Storage
-- استخدام HTTPS في الإنتاج
+4. **Run the application**
+```bash
+flutter run -d chrome --web-renderer html
+```
 
-## المكتبات المستخدمة
+### Database Setup
 
-- **GetX**: إدارة الحالة والمسارات
-- **Supabase Flutter**: قاعدة البيانات والمصادقة
-- **Responsive Builder**: التصميم المتجاوب
-- **FL Chart**: الرسوم البيانية
-- **Data Table 2**: جداول البيانات المتقدمة
-- **Font Awesome**: الأيقونات
+The application expects the following Supabase tables:
 
-## المطور
+#### Users Table (`profiles`)
+```sql
+CREATE TABLE profiles (
+  id UUID REFERENCES auth.users ON DELETE CASCADE,
+  email TEXT,
+  name TEXT,
+  role TEXT DEFAULT 'user',
+  created_at TIMESTAMP DEFAULT NOW(),
+  PRIMARY KEY (id)
+);
+```
 
-تم تطوير هذا المشروع بواسطة **MiniMax Agent** لإدارة متجر Shoply الإلكتروني.
+#### Products Table
+```sql
+CREATE TABLE products (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  name TEXT NOT NULL,
+  description TEXT,
+  price DECIMAL(10,2) NOT NULL,
+  stock INTEGER DEFAULT 0,
+  category TEXT,
+  image_url TEXT,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+```
 
-## الدعم
+#### Orders Table
+```sql
+CREATE TABLE orders (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  customer_id UUID REFERENCES profiles(id),
+  total_amount DECIMAL(10,2) NOT NULL,
+  status TEXT DEFAULT 'pending',
+  created_at TIMESTAMP DEFAULT NOW()
+);
+```
 
-للحصول على الدعم أو الإبلاغ عن مشاكل، يرجى التواصل مع فريق التطوير.
+## 🔧 Configuration
+
+### Environment Setup
+
+1. Create a Supabase project at [supabase.com](https://supabase.com)
+2. Copy your project URL and anon key
+3. Update the constants file with your credentials
+4. Set up the required database tables
+5. Create an admin user with role 'admin'
+
+### Admin User Setup
+
+To create your first admin user:
+
+1. Go to your Supabase project dashboard
+2. Navigate to Authentication > Users
+3. Create a new user or update an existing user
+4. In the `profiles` table, set the `role` field to 'admin'
+
+## 📸 Screenshots
+
+> **Note:** Add screenshots of your dashboard here to showcase the UI
+
+- Dashboard Overview
+- Products Management
+- User Management
+- Order Processing
+- Analytics Charts
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+### Development Workflow
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+If you encounter any issues or have questions:
+
+1. Check the [Issues](https://github.com/yourusername/shoply-admin-dashboard/issues) page
+2. Create a new issue with detailed description
+3. Contact the maintainers
+
+## 🙏 Acknowledgments
+
+- Flutter team for the amazing framework
+- Supabase for the powerful backend solution
+- GetX community for state management
+- All contributors and supporters
+
+---
+
+**Built with ❤️ using Flutter & Supabase**
