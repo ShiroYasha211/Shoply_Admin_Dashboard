@@ -105,7 +105,6 @@ lib/
 
 ## 📸 Screenshots
 
-> **Note:** Add screenshots of your dashboard here to showcase the UI
 
 
 <img width="1920" height="870" alt="Screenshot 2025-10-02 212440" src="https://github.com/user-attachments/assets/032a690f-f757-4873-bb3a-e3cb1166e18b" />
