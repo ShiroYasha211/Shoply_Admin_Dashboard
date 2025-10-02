@@ -101,103 +101,33 @@ lib/
 - Web browser (Chrome recommended)
 - Supabase account
 
-### Installation
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/shoply-admin-dashboard.git
-cd shoply-admin-dashboard
-```
-
-2. **Install dependencies**
-```bash
-flutter pub get
-```
-
-3. **Configure Supabase**
-   
-   Update the Supabase configuration in `lib/app/core/constants/supabase_constants.dart`:
-```dart
-class SupabaseConstants {
-  static const String supabaseUrl = 'YOUR_SUPABASE_URL';
-  static const String supabaseAnonKey = 'YOUR_SUPABASE_ANON_KEY';
-}
-```
-
-4. **Run the application**
-```bash
-flutter run -d chrome --web-renderer html
-```
-
-### Database Setup
-
-The application expects the following Supabase tables:
-
-#### Users Table (`profiles`)
-```sql
-CREATE TABLE profiles (
-  id UUID REFERENCES auth.users ON DELETE CASCADE,
-  email TEXT,
-  name TEXT,
-  role TEXT DEFAULT 'user',
-  created_at TIMESTAMP DEFAULT NOW(),
-  PRIMARY KEY (id)
-);
-```
-
-#### Products Table
-```sql
-CREATE TABLE products (
-  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
-  name TEXT NOT NULL,
-  description TEXT,
-  price DECIMAL(10,2) NOT NULL,
-  stock INTEGER DEFAULT 0,
-  category TEXT,
-  image_url TEXT,
-  created_at TIMESTAMP DEFAULT NOW()
-);
-```
-
-#### Orders Table
-```sql
-CREATE TABLE orders (
-  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
-  customer_id UUID REFERENCES profiles(id),
-  total_amount DECIMAL(10,2) NOT NULL,
-  status TEXT DEFAULT 'pending',
-  created_at TIMESTAMP DEFAULT NOW()
-);
-```
-
-## 🔧 Configuration
-
-### Environment Setup
-
-1. Create a Supabase project at [supabase.com](https://supabase.com)
-2. Copy your project URL and anon key
-3. Update the constants file with your credentials
-4. Set up the required database tables
-5. Create an admin user with role 'admin'
-
-### Admin User Setup
-
-To create your first admin user:
-
-1. Go to your Supabase project dashboard
-2. Navigate to Authentication > Users
-3. Create a new user or update an existing user
-4. In the `profiles` table, set the `role` field to 'admin'
 
 ## 📸 Screenshots
 
 > **Note:** Add screenshots of your dashboard here to showcase the UI
 
+
+<img width="1920" height="870" alt="Screenshot 2025-10-02 212440" src="https://github.com/user-attachments/assets/032a690f-f757-4873-bb3a-e3cb1166e18b" />
+
 - Dashboard Overview
+
+  <img width="1920" height="867" alt="Screenshot 2025-10-02 205645" src="https://github.com/user-attachments/assets/1be112eb-bc81-4cc5-854d-d52c8a3bd0ad" />
+
 - Products Management
+
+  <img width="1920" height="866" alt="Screenshot 2025-10-02 205617" src="https://github.com/user-attachments/assets/55a691e6-a557-4680-a510-d228b7b73949" />
+
 - User Management
+
+<img width="1920" height="870" alt="Screenshot 2025-10-02 205711" src="https://github.com/user-attachments/assets/0e3f8e03-7823-413d-a779-2a509f054203" />
+
 - Order Processing
-- Analytics Charts
+
+<img width="1920" height="865" alt="Screenshot 2025-10-02 212500" src="https://github.com/user-attachments/assets/63548ed8-c499-430b-b029-2e5775e22101" />
+
+- Analytics Char![Uploading Screenshot 2025-10-02 212500.png…]()
+ts
 
 ## 🤝 Contributing
 
@@ -210,10 +140,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🆘 Support
 
